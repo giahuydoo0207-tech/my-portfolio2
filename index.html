@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đỗ Gia Huy — Portfolio Cá Nhân</title>
+  <meta
+    name="description"
+    content="Portfolio cá nhân của Đỗ Gia Huy — Sinh viên năm 3 trường Đại Học Văn Hiến."
+  />
+
+  <!-- Font chữ Inter từ Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet dùng chung -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ======================= NAVBAR (Bài tập 17.3) ======================= -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__brand">Gia Huy<span>.</span></a>
+
+      <button
+        class="navbar__toggle"
+        aria-label="Mở menu điều hướng"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="navbar__menu">
+          <li><a href="index.html" class="is-current">Trang chủ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="den-keo-quan.html">Đèn Kéo Quân</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= HERO HEADER (KHỐI XANH LỚN) ======================= -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__avatar">GH</div>
+      <h1 class="hero__name">Đỗ Gia Huy</h1>
+      <p class="hero__subtitle">Sinh viên năm 3 trường Đại Học Văn Hiến</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">Xem dự án</a>
+        <a href="contact.html" class="btn btn--ghost">Liên hệ với tôi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= DỰ ÁN NỔI BẬT ======================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Dự án nổi bật</h2>
+      <p class="section-subtitle">
+        Một số sản phẩm thực tế mình đã trực tiếp xây dựng và phát triển trong
+        quá trình học tập và làm việc.
+      </p>
+
+      <div class="projects-grid">
+        <!-- Dự án 1 -->
+        <article class="project-card">
+          <div class="project-card__icon">01</div>
+          <h3 class="project-card__title">Pocsbiz/</h3>
+          <p class="project-card__desc">
+            Ứng dụng quản lý doanh nghiệp và bán hàng cho quán cà phê.
+          </p>
+          <span class="project-card__tag">Quản lý F&amp;B</span>
+        </article>
+
+        <!-- Dự án 2 -->
+        <article class="project-card">
+          <div class="project-card__icon">02</div>
+          <h3 class="project-card__title">Certchain</h3>
+          <p class="project-card__desc">
+            Ứng dụng xác thực chứng chỉ giả qua Web3, NFT, Blockchain.
+          </p>
+          <span class="project-card__tag">Web3 / Blockchain</span>
+        </article>
+
+        <!-- Dự án 3 -->
+        <article class="project-card">
+          <div class="project-card__icon">03</div>
+          <h3 class="project-card__title">AvantiOS</h3>
+          <p class="project-card__desc">
+            Ứng dụng quản lý khách sạn.
+          </p>
+          <span class="project-card__tag">Hotel PMS</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= GIỚI THIỆU NGẮN BÀI TẬP GIỮA KỲ ======================= -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="info-card">
+        <h2>Bài tập giữa kỳ — Đèn Kéo Quân 3D</h2>
+        <p>
+          Bên cạnh các dự án thực tế, mình vừa hoàn thành Bài tập 19: mô phỏng
+          chiếc đèn kéo quân truyền thống bằng CSS 3D Transform — một khối
+          lăng trụ lục giác đều tự xoay liên tục, có thể tạm dừng khi rê
+          chuột vào để ngắm từng mặt ảnh.
+        </p>
+        <div style="margin-top: 18px; text-align: center;">
+          <a href="den-keo-quan.html" class="btn btn--primary"
+            >Xem mô phỏng Đèn Kéo Quân →</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container">
+      &copy; 2026 <strong>Đỗ Gia Huy</strong> — Đại Học Văn Hiến. Được xây
+      dựng bằng HTML, CSS &amp; JavaScript thuần.
+    </div>
+  </footer>
+
+  <!-- Script JS thuần (không inline) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đèn Kéo Quân 3D — Bài tập 19 | Đỗ Gia Huy</title>
+  <meta
+    name="description"
+    content="Mô phỏng đèn kéo quân 3D dạng lăng trụ lục giác bằng CSS 3D Transform - Bài tập giữa kỳ 19."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ======================= NAVBAR (Bài tập 17.3) ======================= -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__brand">Gia Huy<span>.</span></a>
+
+      <button class="navbar__toggle" aria-label="Mở menu điều hướng" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="navbar__menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="den-keo-quan.html" class="is-current">Đèn Kéo Quân</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= PAGE HEADER ======================= -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Bài tập 19 — Đèn Kéo Quân 3D</h1>
+      <p>
+        Lăng trụ lục giác đều 6 mặt, dựng bằng CSS 3D Transform &amp; xoay
+        bằng JavaScript (requestAnimationFrame)
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================= KHU VỰC MÔ PHỎNG ĐÈN KÉO QUÂN ======================= -->
+  <section class="section">
+    <div class="container">
+      <p class="lantern-hint">
+        Đèn sẽ <strong>tự động xoay liên tục</strong>. Rê chuột vào bất kỳ mặt
+        ảnh nào để <strong>tạm dừng</strong> và ngắm kỹ, rê chuột ra để đèn
+        <strong>xoay tiếp</strong>.
+      </p>
+
+      <!-- .lantern-stage thiết lập perspective tạo chiều sâu 3D -->
+      <div class="lantern-stage">
+        <!-- .lantern là khối transform-style: preserve-3d, được JS xoay quanh trục Y -->
+        <div class="lantern" id="lantern">
+          <div class="lantern__face">
+            <img src="assets/lantern-1.svg" alt="Mặt đèn 1 - Hoa Sen" />
+            <span>Mặt 1 — Hoa Sen</span>
+          </div>
+          <div class="lantern__face">
+            <img src="assets/lantern-2.svg" alt="Mặt đèn 2 - Trống Đồng" />
+            <span>Mặt 2 — Trống Đồng</span>
+          </div>
+          <div class="lantern__face">
+            <img src="assets/lantern-3.svg" alt="Mặt đèn 3 - Rồng Việt" />
+            <span>Mặt 3 — Rồng Việt</span>
+          </div>
+          <div class="lantern__face">
+            <img src="assets/lantern-4.svg" alt="Mặt đèn 4 - Áo Dài" />
+            <span>Mặt 4 — Áo Dài</span>
+          </div>
+          <div class="lantern__face">
+            <img src="assets/lantern-5.svg" alt="Mặt đèn 5 - Chùa Một Cột" />
+            <span>Mặt 5 — Chùa Một Cột</span>
+          </div>
+          <div class="lantern__face">
+            <img src="assets/lantern-6.svg" alt="Mặt đèn 6 - Đèn Hội An" />
+            <span>Mặt 6 — Đèn Hội An</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <div class="lantern-status">
+          <span class="lantern-status__dot"></span>
+          <span class="lantern-status__text">Đang xoay tự động</span>
+        </div>
+      </div>
+
+      <!-- Gợi ý: 6 ảnh trên là placeholder SVG trong /assets — chỉ cần thay
+           đường dẫn src bằng ảnh thật của bạn (jpg/png) là xong. -->
+    </div>
+  </section>
+
+  <!-- ======================= KHU VỰC MINH HOẠ BÀI TẬP 18 — QUIZ APP ======================= -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title">Kết quả Bài tập 18 — Ứng dụng Quiz</h2>
+      <p class="section-subtitle">
+        Ảnh chụp màn hình kết quả của ứng dụng trắc nghiệm (Quiz App) đã thực
+        hiện ở bài tập trước.
+      </p>
+
+      <div class="quiz-showcase">
+        <p>
+          <strong>Quiz Application — Exercise 18</strong>
+        </p>
+
+        <!--
+          PLACEHOLDER ẢNH CHỤP KẾT QUẢ QUIZ:
+          Thay khối <div class="quiz-showcase__frame"> bên dưới bằng:
+            <div class="quiz-showcase__frame has-image">
+              <img src="assets/quiz-result.png" alt="Kết quả Quiz - Bài tập 18" />
+            </div>
+          khi bạn đã có ảnh chụp màn hình thật.
+        -->
+        <div class="quiz-showcase__frame">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9 12l2 2 4-4m5-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p><strong>Khu vực hiển thị ảnh kết quả Quiz (Bài tập 18)</strong></p>
+          <small>
+            Đặt file ảnh vào thư mục <code>assets/</code>, ví dụ
+            <code>assets/quiz-result.png</code>, rồi thêm thẻ
+            &lt;img&gt; vào đây.
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container">
+      &copy; 2026 <strong>Đỗ Gia Huy</strong> — Đại Học Văn Hiến. Được xây
+      dựng bằng HTML, CSS &amp; JavaScript thuần.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

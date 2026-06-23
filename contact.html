@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên hệ — Đỗ Gia Huy</title>
+  <meta name="description" content="Thông tin liên hệ với Đỗ Gia Huy." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ======================= NAVBAR (Bài tập 17.3) ======================= -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__brand">Gia Huy<span>.</span></a>
+
+      <button class="navbar__toggle" aria-label="Mở menu điều hướng" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="navbar__menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="den-keo-quan.html">Đèn Kéo Quân</a></li>
+          <li><a href="contact.html" class="is-current">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= PAGE HEADER ======================= -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Liên hệ với mình</h1>
+      <p>Rất vui nếu được kết nối và trao đổi thêm</p>
+    </div>
+  </section>
+
+  <!-- ======================= NỘI DUNG LIÊN HỆ ======================= -->
+  <section class="section">
+    <div class="container">
+      <div class="info-card">
+        <h2>Thông tin liên hệ</h2>
+        <ul class="info-list">
+          <li><b>Họ tên:</b> Đỗ Gia Huy</li>
+          <li><b>Trường:</b> Đại Học Văn Hiến</li>
+          <li><b>Email:</b> giahuy.do@example.com</li>
+          <li><b>Github:</b> github.com/dogiahuy</li>
+        </ul>
+
+        <h2>Gửi lời nhắn</h2>
+        <!--
+          Lưu ý: Đây là form demo tĩnh, chưa kết nối backend.
+          Khi deploy lên Netlify có thể bật Netlify Forms bằng cách thêm
+          thuộc tính data-netlify="true" vào thẻ <form> này.
+        -->
+        <form class="contact-form" action="#" method="post">
+          <div>
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" placeholder="Nhập họ tên của bạn" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="ban@email.com" required />
+          </div>
+          <div>
+            <label for="message">Lời nhắn</label>
+            <textarea id="message" name="message" rows="4" placeholder="Nội dung bạn muốn gửi..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="align-self: flex-start;">
+            Gửi lời nhắn
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container">
+      &copy; 2026 <strong>Đỗ Gia Huy</strong> — Đại Học Văn Hiến. Được xây
+      dựng bằng HTML, CSS &amp; JavaScript thuần.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

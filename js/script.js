@@ -45,9 +45,9 @@
     var statusBadge = document.querySelector(".lantern-status");
     var statusText = document.querySelector(".lantern-status__text");
 
-    var currentAngle = 0;         // Góc xoay hiện tại (độ)
-    var rotationSpeed = 0.18;     // Tốc độ xoay (độ / mỗi frame) — chỉnh tại đây để nhanh/chậm
-    var isPaused = false;         // Trạng thái dừng khi hover
+    var currentAngle = 0;         
+    var rotationSpeed = 0.18;     
+    var isPaused = false;         
     var rafId = null;
 
     // Tôn trọng người dùng yêu cầu giảm hiệu ứng chuyển động (a11y)
@@ -63,13 +63,12 @@
         : "Đang xoay tự động";
     }
 
-    // Vòng lặp animation chính — dùng requestAnimationFrame để xoay mượt mà,
-    // đồng bộ với khung hình của trình duyệt (mượt hơn setInterval nhiều).
+    
     function rotateLoop() {
       if (!isPaused) {
         currentAngle += rotationSpeed;
         if (currentAngle >= 360) {
-          currentAngle -= 360; // Giữ giá trị nhỏ, tránh số tăng vô hạn
+          currentAngle -= 360; 
         }
         lantern.style.transform = "rotateY(" + currentAngle + "deg)";
       }
@@ -86,22 +85,20 @@
       updateStatusUI(false);
     }
 
-    // Gắn sự kiện mouseenter/mouseleave lên TỪNG mặt ảnh của lồng đèn
     // (đúng yêu cầu đề bài: "hover vào BẤT KỲ ảnH nào thì dừng").
     var faces = lantern.querySelectorAll(".lantern__face");
     faces.forEach(function (face) {
       face.addEventListener("mouseenter", pauseLantern);
       face.addEventListener("mouseleave", resumeLantern);
 
-      // Hỗ trợ thêm cho thiết bị cảm ứng: chạm vào ảnh cũng tạm dừng,
-      // chạm ra ngoài lồng đèn thì xoay tiếp.
+   // Hỗ trợ thêm cho thiết bị cảm ứng: chạm vào ảnh cũng tạm dừng, chạm ra ngoài lồng đèn thì xoay tiếp.
       face.addEventListener("touchstart", pauseLantern, { passive: true });
     });
 
     lantern.addEventListener("touchend", resumeLantern);
 
     // Nếu người dùng cấu hình giảm hiệu ứng động trên hệ điều hành/trình
-    // duyệt, hiển thị tĩnh ở góc nghiêng nhẹ thay vì xoay liên tục.
+
     if (prefersReducedMotion) {
       lantern.style.transform = "rotateY(15deg)";
       updateStatusUI(true);

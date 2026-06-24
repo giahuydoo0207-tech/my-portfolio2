@@ -1,14 +1,14 @@
 /*1. CSS VARIABLES — BẢNG MÀU & BIẾN DÙNG CHUNG*/
 :root {
   /* Bảng màu chính */
-  --color-primary: #0284c7;        /* Sky Blue - màu chủ đạo */
-  --color-primary-dark: #075985;   /* Xanh đậm hơn dùng cho hover/active */
-  --color-primary-light: #38bdf8;  /* Xanh nhạt dùng cho điểm nhấn */
-  --color-accent-bg: #e0f2fe;      /* Nền xanh rất nhạt */
+  --color-primary: #0284c7;       
+  --color-primary-dark: #075985;   
+  --color-primary-light: #38bdf8;  
+  --color-accent-bg: #e0f2fe;      
   --color-white: #ffffff;
-  --color-bg: #f8fafc;             /* Nền tổng thể của trang */
-  --color-text: #0f172a;           /* Màu chữ chính (gần đen) */
-  --color-text-muted: #64748b;     /* Màu chữ phụ/mô tả */
+  --color-bg: #f8fafc;            
+  --color-text: #0f172a;          
+  --color-text-muted: #64748b;     
   --color-border: #e2e8f0;
 
   /* Hiệu ứng đổ bóng */
